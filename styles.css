@@ -175,6 +175,9 @@ footer{
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 100%;
+    padding: 0 30px;
+    align-content: center;
+    
 }
 
 .logo-2 {
@@ -186,12 +189,12 @@ footer{
     color: white;
 }
 
-.social-icon{
+/* .social-icon{
     padding-right: 4px;
-}
+} */
 
 .fa-solid{
-    padding-right: 4px;
+   
     color: white;
 }
 
@@ -200,7 +203,7 @@ footer{
 }
 
 .copyright{
-    justify-items: right;
+    align-items:self-end;
 
 }
 
