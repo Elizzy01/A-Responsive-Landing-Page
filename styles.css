@@ -72,6 +72,7 @@ a{
 /* container-fluid section */
 .intro{
     margin-top: 10%;
+    animation: slideInFromLeft 1s ease-in;
 }
 
 .intro-text{
@@ -94,6 +95,10 @@ div{
 img {
     width: 100%;
 } 
+
+.img-1{
+    animation: slideInFromTop 1s ease-in;
+}
  
 button {
     border: none;
@@ -141,9 +146,11 @@ padding: 10% 5%;
 
 .users, .grow{
     margin-right: 100px;
+    animation: slideInFromLeft 1s ease-in;
 }
 .conversation{
     margin-left: 100px;
+    animation: slideInFromRight 1s step-start;
 }
 
 .grow-img{
@@ -155,7 +162,7 @@ padding: 10% 5%;
     align-items: center;
     text-align: center;
     padding: 0 28%;
-  
+    margin-bottom: 0;
 }
 
 .build{
@@ -166,10 +173,12 @@ padding: 10% 5%;
 
 /* footer */
 footer{
+    animation: slideInFromBottom 1s ease-in;
     background-color: var(--Very-Dark-Cyan);
     padding: 100px 50px 20px;
     color: var(--Grayish-Blue);
     font-size: medium;
+    position: absolute;
     z-index: -1;
 }
 
@@ -201,7 +210,7 @@ footer{
 
 .fa-solid {
     vertical-align: middle;
-    line-height: 50px;
+    line-height: 0;
     color: white;
 }
 
@@ -220,22 +229,89 @@ footer{
 }
 
 
+/* Animations */
+@keyframes slideInFromLeft{
+    0%{
+        transform: translateX(-100);
+    }
+
+    100%{
+        transform: translateX(0)
+    }
+}
+
+@keyframes slideInFromRight{
+    0%{
+        transform: translateX(100);
+    }
+
+    100%{
+        transform: translateX(0)
+    }
+}
+
+@keyframes slideInFromTop{
+    0%{
+        transform: translateY(-100);
+    }
+
+    100%{
+        transform: translateX(0)
+    }
+}
+
+@keyframes slideInFromBottom{
+    0%{
+        transform: translateY(100);
+    }
+
+    100%{
+        transform: translateX(0)
+    }
+}
 
 
 
 
 @media screen and (max-width: 480px) {
- body{
+.top-section{
     background-image: var(--Mobile-background);
- }
+    background-color:hsl(195, 100%, 97%) ;
+}
  
+.logo{
+    width: 30%
+}
+
 section {
     
         display: block;
         text-align: center;
         justify-content: center;
-        margin: 25% auto;
+       
     }
+
+footer, .container-fluid, .middle-section, .grow-together, .flowing-conversation, .your-users, .foot{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+} 
+
+.grow, .conversation, .users{
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.build-community{
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+  
+}
+.copyright{
+    text-align: center;
+}
 
 
     
