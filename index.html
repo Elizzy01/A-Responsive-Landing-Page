@@ -13,6 +13,8 @@
 </head>
 
 <body>
+  <div id="preloader"></div>
+
   <section class="top-section">
     <!-- Nav Bar -->
     <div class="navbar">
@@ -86,6 +88,8 @@
     </div>
   </section>
 
+  <iframe class="video" width="560" height="315"  src="https://www.youtube.com/embed/sGQu-Sc6b9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
   <section class="build-community">
     <div class="build">
       <h3>Ready To Build Your Community?</h3>
@@ -146,6 +150,15 @@
       </div>
 
     </div>
+
+    <script>
+      var loader = document.getElementById("preloader");
+
+      window.addEventListener("load", function(){
+        loader.style.display = "none"
+      })
+
+    </script>
 
     <div class="copyright">Copyright 2018 Huddle. All rights reserved.</div>
 
